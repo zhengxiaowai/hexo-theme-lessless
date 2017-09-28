@@ -1,56 +1,57 @@
 body {
-    font-family: source-han-sans-simplified-c,"Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
-    color: #484848;
-    font-weight: 500;
+  font-family: source-han-sans-simplified-c, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-weight: 500;
+  color: #484848;
 }
-
 a {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
+}
+.bull {
+  margin: 0 6px;
 }
 .mainbody {
-    max-width: 100%;
-    width: 690px;
+  max-width: 100%;
+  width: 690px;
 }
-
-.topnavs {
-    margin: 10px 0px;
-    font-weight: bold;
+.mainbody .topnavs {
+  margin: 10px 0px;
+  font-weight: bold;
 }
-
-.topnavs > .navbar {
-    padding: 0px;
+.mainbody .topnavs .navbar {
+  padding: 0px;
 }
-
-.postcards > .postcard {
-    margin-bottom: 10px;
-    box-shadow: 0 1px 3px rgba(0,0,0,.1);
-    border-radius: 0;
+.mainbody .postcards .postcard {
+  margin-bottom: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 0;
 }
-
-.postcard-title {
-    font-size: 20px;
-    font-weight: bold;
+.mainbody .postcards .postcard .postcard-title {
+  font-size: 20px;
+  font-weight: bold;
 }
-
-.postcard-title > a {
-    color: #333;
+.mainbody .postcards .postcard .postcard-title a {
+  color: #333;
 }
-
-.postcard-body {
-    font-size: 16px;
-    margin: 10px 0;
+.mainbody .postcards .postcard .postcard-body {
+  font-size: 16px;
+  margin: 10px 0;
 }
-
-.postcard-footer {
-    font-size: 14px;
-    color: gray;
+.mainbody .postcards .postcard .postcard-body .read-more {
+  color: #b3b3b3;
 }
-
-.bull {
-    margin: 0 6px;
+.mainbody .postcards .postcard .postcard-footer {
+  font-size: 14px;
+  color: gray;
 }
-
-.read-more {
-    color: #b3b3b3;
+.articel {
+  margin-top: 40px;
+}
+.articel .articel-title {
+  margin-bottom: 40px;
+}
+.articel .articel-title > h2 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
 }
