@@ -1,0 +1,24 @@
+<div class="card postcard">
+    <div class="card-body">
+        <h3 class='postcard-title'>
+            <a href="<%- url_for(item.path) %>">
+                <%- item.title %>
+            </a>
+        </h3>
+        <div class="postcard-body">
+            <div class="excerpt">
+                <%- item.excerpt %>
+            </div>
+            <div class="read-more">
+                <a href="<%- url_for(item.path) %>">
+                    查看全文 >
+                </a>
+            </div>
+        </div>
+        <footer class="postcard-footer">
+            <span><%- config.author %></span>
+            <span class="bull">·</span>
+            <span><%- date(item.date, "YYYY-MM-DD")%></span>
+        </footer>
+    </div>
+</div>
