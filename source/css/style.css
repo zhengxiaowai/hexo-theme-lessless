@@ -1,6 +1,6 @@
 body {
   font-family: source-han-sans-simplified-c, "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   color: #484848;
 }
 a {
@@ -45,13 +45,87 @@ a {
   color: gray;
 }
 .articel {
-  margin-top: 40px;
+  margin: 40px 0;
 }
 .articel .articel-title {
   margin-bottom: 40px;
 }
-.articel .articel-title > h2 {
+.articel .articel-title > h1 {
   text-align: center;
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 600;
+}
+.markdown {
+  font-size: 16px;
+  line-height: 2rem;
+}
+.markdown h1 {
+  font-size: 2rem;
+}
+.markdown h2 {
+  font-size: 1.75rem;
+  margin: 45px 0 .8rem;
+}
+.markdown h3 {
+  font-size: 1.5rem;
+  margin: 30px 0 .8rem;
+}
+.markdown h4 {
+  font-size: 1.25rem;
+  margin: 15px 0 .8rem;
+}
+.markdown h5 {
+  font-size: 1rem;
+}
+.markdown h6 {
+  font-size: 1rem;
+}
+.markdown pre {
+  font-family: Roboto Mono,Monaco,courier,monospace !important;
+  background: #f8f8f8 !important;
+  font-size: .8rem;
+  padding: 1.5rem 1rem !important;
+  margin: 0.5rem 0 !important;
+}
+.markdown p {
+  margin: 0.5rem 0;
+}
+.markdown img {
+  max-width: 100%;
+  margin: 1rem 0;
+}
+.markdown blockquote {
+  background-color: #f8f8f8;
+  border-left: 5px solid #8ED2C9;
+  padding: 0.5rem 1rem;
+}
+.markdown ul {
+  margin: 1rem 0;
+  padding-left: 40px;
+}
+.markdown ul li {
+  word-wrap: break-word;
+}
+.markdown a {
+  color: #42b983;
+  text-decoration: underline;
+}
+.markdown table {
+  border: 1px solid #e8e8e8;
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+.markdown table thead {
+  font-weight: bold;
+}
+.markdown table tr {
+  background-color: #fff;
+  border-top: 1px solid #c6cbd1;
+}
+.markdown table td,
+.markdown table th {
+  padding: 6px 13px;
+  border: 1px solid #dfe2e5;
+  text-align: center !important;
 }
