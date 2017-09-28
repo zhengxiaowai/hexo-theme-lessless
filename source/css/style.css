@@ -1,0 +1,56 @@
+body {
+    font-family: source-han-sans-simplified-c,"Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+    color: #484848;
+    font-weight: 500;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+.mainbody {
+    max-width: 100%;
+    width: 690px;
+}
+
+.topnavs {
+    margin: 10px 0px;
+    font-weight: bold;
+}
+
+.topnavs > .navbar {
+    padding: 0px;
+}
+
+.postcards > .postcard {
+    margin-bottom: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.1);
+    border-radius: 0;
+}
+
+.postcard-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.postcard-title > a {
+    color: #333;
+}
+
+.postcard-body {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.postcard-footer {
+    font-size: 14px;
+    color: gray;
+}
+
+.bull {
+    margin: 0 6px;
+}
+
+.read-more {
+    color: #b3b3b3;
+}
