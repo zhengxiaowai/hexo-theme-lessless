@@ -1,0 +1,5 @@
+<div class="postcards">
+    <% page.posts.each(function(single){ %>
+        <%- partial('_partial/card', {item: single}) %>
+    <% }) %>
+</div>
