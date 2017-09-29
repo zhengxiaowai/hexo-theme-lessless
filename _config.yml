@@ -1,0 +1,13 @@
+menu:
+  Home: /
+  Archives: /archives
+  #About: /about
+
+
+busuanzi:
+  enable: true
+
+
+disqus:
+  enable: true
+  shortname: hexiangyu
