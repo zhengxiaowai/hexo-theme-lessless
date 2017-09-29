@@ -1,4 +1,4 @@
-<div class='topnavs'>
+<div class='topnavs container fixed-690'>
     <nav class="navbar navbar-expand-lg navbar-light">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
             aria-expanded="false" aria-label="Toggle navigation">
@@ -6,18 +6,11 @@
                   </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
+                <% for (var i in theme.menu){ %>
                 <li class="nav-item">
-                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Archive</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Tags</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
-                </li>
+                <% } %>
             </ul>
         </div>
     </nav>

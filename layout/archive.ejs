@@ -1,0 +1,32 @@
+<%
+var posts = []
+site.posts.forEach(function(item, index) {
+	var year = date(item.date, 'YYYY');
+	if (!posts[year]) {
+		posts[year] = [];
+	}
+	posts[year].push({
+		'title': item.title,
+		'path': item.path,
+		'date': date(item.date, 'YYYY-MM-DD')
+	})
+});
+%>
+
+<div class="archive">
+<% posts.forEach(function(items, year) { %>
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">Archives</li>
+        <li class="breadcrumb-item active"><span><%- year %></span></li>
+    </ol>
+    <ul class="list-group archives-year">
+    <% items.forEach(function(item, index) { %>
+        <li class="list-group-item archives-year-item">
+            <a href="<%- url_for(item.path) %>">
+                <span><%- item.title %></span>
+            </a>
+            <span class="archives-year-item-date"><%- item.date %> </span></li> 
+    <% }) %>
+    </ul>
+<% }) %>
+</div>

@@ -1,11 +1,13 @@
 <%- partial('_partial/head') %>
 
     <body>
-        <section class="container mainbody">
-        <%- partial('_partial/topnavs') %>
-        
+        <div class="root">
+            <%- partial('_partial/topnavs') %>
+            <section class="container mainbody fixed-690">
             <%- body %>
-        </section>
+            </section>
+            <%- partial('_partial/footer') %>
+        </div>
         <%- partial('_partial/foot') %>
     </body>
 
