@@ -1,17 +1,27 @@
-@commonMargin: .5rem 0;
+@commonMargin: 0 0 1rem 0;
 @lineHeight: 2rem;
 
 .markdown {
     font-size: 16px;
     line-height: @lineHeight;
 
+    h1, h2, h3, h4, h5, h6 {
+        margin-top: 24px;
+        margin-bottom: 16px;
+        font-weight: 600;
+    }
+
     h1 {
         font-size: 2rem;
+        padding-bottom: 0.3em;
+        border-bottom: 1px solid #eee;
     }
 
     h2 {
         font-size: 1.75rem;
         margin: 45px 0 .8rem;
+        padding-bottom: 0.3em;
+        border-bottom: 1px solid #eee;
     }
 
     h3 {
@@ -35,8 +45,8 @@
     pre {
         font-family: Roboto Mono,Monaco,courier,monospace !important;
         background: #f8f8f8 !important;
-        font-size: .8rem;
-        padding: 1.5rem 1rem !important;
+        font-size: 1rem;
+        padding: 1.3rem 1rem !important;
         margin: @commonMargin !important;
     }
 
@@ -51,8 +61,14 @@
 
     blockquote {
         background-color: #f8f8f8;
-        border-left: 5px solid #8ED2C9;
+        border-left: 5px solid #ddd;
         padding: 0.5rem 1rem;
+        &>:first-child {
+            margin-top: 0;
+        }
+        &>:last-child {
+            margin-bottom: 0;
+        }
     }
 
     ul {
@@ -64,8 +80,11 @@
     }
 
     a {
-        color: #42b983;
-        text-decoration: underline;
+        color: #4078c0;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
     }
 
     table {
