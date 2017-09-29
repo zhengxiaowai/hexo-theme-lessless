@@ -5,6 +5,7 @@
                 <%- item.title %>
             </a>
         </h3>
+        <% if (item.excerpt) { %>
         <div class="postcard-body">
             <div class="excerpt">
                 <%- item.excerpt %>
@@ -15,6 +16,7 @@
                 </a>
             </div>
         </div>
+        <% } %>
         <footer class="postcard-footer">
             <span><%- config.author %></span>
             <span class="bull">·</span>
