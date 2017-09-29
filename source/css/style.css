@@ -10,16 +10,35 @@ a {
 .bull {
   margin: 0 6px;
 }
-.mainbody {
-  max-width: 100%;
+.fixed-690 {
   width: 690px;
+  max-width: 100%;
 }
-.mainbody .topnavs {
-  margin: 10px 0px;
+.root {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.topnavs {
+  margin: 10px auto;
   font-weight: bold;
 }
-.mainbody .topnavs .navbar {
+.topnavs .navbar {
   padding: 0px;
+}
+.footer {
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  color: #b3b3b3;
+  padding: 20px 0;
+  border-top: 1px solid #e8e8e8;
+}
+.mainbody {
+  flex: 1;
+}
+.mainbody .postcards {
+  flex: 1;
 }
 .mainbody .postcards .postcard {
   margin-bottom: 10px;
@@ -49,11 +68,34 @@ a {
 }
 .articel .articel-title {
   margin-bottom: 40px;
+  border-bottom: 1px solid #e8e8e8;
+}
+.articel .articel-title .article-title-views {
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  color: #b3b3b3;
+  padding: 20px 0;
 }
 .articel .articel-title > h1 {
   text-align: center;
   font-size: 28px;
   font-weight: 600;
+}
+.archive .breadcrumb {
+  background-color: #fff;
+  padding: 1rem 8px;
+  margin-bottom: 0;
+  font-weight: bold;
+}
+.archive .archives-year .archives-year-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: bold;
+}
+.archive .archives-year .archives-year-item .archives-year-item-date {
+  color: #868e96;
 }
 .markdown {
   font-size: 16px;
