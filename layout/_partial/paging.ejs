@@ -1,0 +1,21 @@
+<%
+    var basePagingLinkClass = ['btn', 'btn-secondary'];
+    var prevClass = _.cloneDeep(basePagingLinkClass)
+    var nextClass = _.cloneDeep(basePagingLinkClass)
+
+    if (isFirst) {
+        prevClass.push('disabled')
+    }
+
+    if (isLast) {
+        nextClass.push('disabled')
+    }
+
+    var prevClassString = prevClass.join(' ');
+    var nextClassString = nextClass.join(' ');
+%>
+
+<div class="paging">
+    <a href="<%- url_for(prev.link) %>" class="<%- prevClassString %>" role="button" aria-disabled="true"><%- prev.text %></a>
+    <a href="<%- url_for(next.link) %>" class="<%- nextClassString %>" role="button" aria-disabled="true"><%- next.text %></a>
+</div>

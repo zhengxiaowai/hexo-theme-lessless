@@ -2,25 +2,23 @@
     <% page.posts.each(function(single){ %>
         <%- partial('_partial/card', {item: single}) %>
             <% }) %>
-                <a href="<%- url_for(page.prev_link) %>">上一页</a>
-                <a href="<%- url_for(page.next_link) %>">下一页</a>
-                <nav aria-label="Page navigation example">
-                    <ul class="pagination justify-content-center">
-                        <li class="page-item disabled">
-                            <a class="page-link" href="#" tabindex="-1">Previous</a>
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link" href="#">1</a>
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link" href="#">2</a>
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link" href="#">3</a>
-                        </li>
-                        <li class="page-item">
-                            <a class="page-link" href="#">Next</a>
-                        </li>
-                    </ul>
-                </nav>
+
 </div>
+
+<%
+    var paging = {
+        total: page.total,
+        current: page.current,
+        isFirst: page.current == 1 ? true : false,
+        isLast: page.total == page.current ? true : false,
+        prev: {
+            text: '上一页',
+            link: page.prev_link
+        },
+        next: {
+            text: '下一页',
+            link: page.next_link
+        }
+    }
+%>
+<%- partial('_partial/paging', paging) %>
