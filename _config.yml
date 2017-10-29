@@ -1,6 +1,9 @@
 menu:
-  Home: /
-  Archives: /archives
+  首页: /
+  分类: /categories
+  归档: /archives
+  标签: /tags 
+  
   #About: /about
 
 
