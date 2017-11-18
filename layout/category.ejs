@@ -1,0 +1,39 @@
+<%
+    const getCategoriesName = objs => objs.map(obj => obj.name);
+
+    let posts = site.posts.map(function(post) {
+        return {
+            title: post.title,
+            path: post.path,
+		    date: date(post.date, 'YYYY-MM-DD'),
+            categories: getCategoriesName(post.categories.data)
+        }
+    })
+
+    let allCategories = _.union(...posts.map(post => post.categories));
+    
+    let categoryPosts = {}
+    allCategories.forEach(category => {
+       categoryPosts[category] = _.filter(
+           posts, post => _.includes(post.categories, category))
+    })
+%>
+
+
+<div class="archive">
+    <% _.forEach(categoryPosts, function(posts, category) { %>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">分类</li>
+            <li class="breadcrumb-item active"><span><%- category %></span></li>
+        </ol>
+        <ul class="list-group archives-year">
+        <% posts.forEach(function(item) { %>
+            <li class="list-group-item archives-year-item">
+                <a href="<%- url_for(item.path) %>">
+                    <span><%- item.title %></span>
+                </a>
+                <span class="archives-year-item-date"><%- item.date %> </span></li> 
+        <% }) %>
+        </ul>
+    <% }) %>
+</div>
