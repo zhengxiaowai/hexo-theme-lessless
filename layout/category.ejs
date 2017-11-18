@@ -5,7 +5,8 @@
         return {
             title: post.title,
             path: post.path,
-		    date: date(post.date, 'YYYY-MM-DD'),
+            date: date(post.date, 'YYYY-MM-DD'),
+            rawDate: post.date,
             categories: getCategoriesName(post.categories.data)
         }
     })
@@ -14,8 +15,8 @@
     
     let categoryPosts = {}
     allCategories.forEach(category => {
-       categoryPosts[category] = _.filter(
-           posts, post => _.includes(post.categories, category))
+       categoryPosts[category] = _(posts).filter(
+           post => _.includes(post.categories, category)).sortBy(['rawDate']).reverse().value()
     })
 %>
 
