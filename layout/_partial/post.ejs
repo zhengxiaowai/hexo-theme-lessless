@@ -1,21 +1,21 @@
-<div class="article">
-    <div class="article-title">
+<div class="post">
+    <div class="post-title">
         <h1>
             <%- post.title %> 
         </h1>
 
         <% if (theme.busuanzi.enable) { %>
-        <div class="article-title-views">
+        <div class="post-title-views">
             <span id="busuanzi_container_page_pv">
                 本文总阅读量 <span id="busuanzi_value_page_pv"></span> 次
             </span>
         </div>
         <% } %>
     </div>
-    <div class="article-content markdown">
+    <div class="post-content markdown">
         <%- post.content %> 
     </div>
-    <div class="article-foot">
+    <div class="post-foot">
         <div id="disqus_thread"></div>
     </div>
 </div>
