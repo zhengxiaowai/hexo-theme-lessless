@@ -5,5 +5,7 @@
     <div>
         <span>Theme <a href="https://github.com/zhengxiaowai/hexo-theme-lessless">lessless</a></span>
     </div>
-    <%- partial('_widget/busuanzi') %>
+        <% if (theme.busuanzi.enable) { %>
+            <%- partial('_widget/busuanzi') %>
+        <% } %>
 </footer>
