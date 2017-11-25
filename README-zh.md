@@ -1,23 +1,23 @@
 # hexo-theme-lessless
 
-the simple theme for hexo. which has no futures, just very simple. 
+Hexo 主题，没有什么功能，就是简单的博客主题。
 
 # Usage
 
-enter hexo folder and git clone lessless：
+进入 hexo 文件夹：
 
 ```shell
 git clone git@github.com:zhengxiaowai/hexo-theme-lessless.git themes/lessless
 ```
 
-extra hexo config:
+额外的 hexo 配置:
 
 ```shell
 npm install hexo-prism-plugin
 npm install hexo-renderer-marked
 ```
 
-copy the content below to hexo's _config.yml
+复制以下内容到 hexo _config.yaml 中
 
 ```yaml
 prism_plugin:
@@ -37,49 +37,48 @@ marked:
   autolink: true
 ```
 
-close default highlight:
+关闭默认的 highlight
 
 ```yaml
 highlight:
   enable: false
 ```
 
-# lessless theme config
+# lessless 配置
 
 ## menu
 
-about top navs
-
+主题导航相关配置
 
 ```yaml
 menu:
-  Home: /
-  Categotry: /categories
-  Archive: /archives
-  # Tag: /tags 
-  # About: /about 
+  首页: /
+  分类: /categories
+  归档: /archives
+  # 标签: /tags 
+  # 关于: /about
+
 ```
 
-default enable：Home、Category、Archive
-
+默认开启：首页、分类、归档
 
 ## busuanzi
 
-Simple calculation for pv(uv)
+简易的页面 uv、pv 的计算
 
 ```yaml
 busuanzi:
   enable: true
 ```
 
-show pv and uv under home page and show pv under post's title when enable busuanzi
+默认开启会在首页底部显示 uv 和 pv，在文章页面的题目下方显示 pv
 
 ## disqus
 
-disqus comment config
+disqus 评论设置
 
 ```yaml
 disqus:
   enable: false
-  shortname: <your_shortname>
+  shortname: <你的 shortname>
 ```
