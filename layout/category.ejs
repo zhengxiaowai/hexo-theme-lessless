@@ -20,21 +20,4 @@
     })
 %>
 
-
-<div class="archive">
-    <% _.forEach(categoryPosts, function(posts, category) { %>
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item">分类</li>
-            <li class="breadcrumb-item active"><span><%- category %></span></li>
-        </ol>
-        <ul class="list-group archives-year">
-        <% posts.forEach(function(item) { %>
-            <li class="list-group-item archives-year-item">
-                <a href="<%- url_for(item.path) %>">
-                    <span><%- item.title %></span>
-                </a>
-                <span class="archives-year-item-date"><%- item.date %> </span></li> 
-        <% }) %>
-        </ul>
-    <% }) %>
-</div>
+<%- partial('_partial/catalogue', {type: "分类", chapters: categoryPosts, orderEach: _.each}) %>

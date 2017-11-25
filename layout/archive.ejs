@@ -1,5 +1,5 @@
 <%
-var items = site.posts.map(function(item, index) {
+let items = site.posts.map(function(item, index) {
     return {
         'title': item.title,
 		'path': item.path,
@@ -8,24 +8,11 @@ var items = site.posts.map(function(item, index) {
     }
 });
 
-var posts = _.groupBy(items, function(item) { return item.year });
-var years = _.keys(posts).reverse();
+let postsByYear = _.groupBy(items, item => item.year);
+let archivePosts = _.mapValues(
+    postsByYear, 
+    posts => _.sortBy(posts, post => post.date).reverse());
+
 %>
 
-<div class="archive">
-<% _.forEach(years, function(year) { %>
-    <ol class="breadcrumb">
-        <li class="breadcrumb-item">归档</li>
-        <li class="breadcrumb-item active"><span><%- year %></span></li>
-    </ol>
-    <ul class="list-group archives-year">
-    <% posts[year].forEach(function(item, index) { %>
-        <li class="list-group-item archives-year-item">
-            <a href="<%- url_for(item.path) %>">
-                <span><%- item.title %></span>
-            </a>
-            <span class="archives-year-item-date"><%- item.date %> </span></li> 
-    <% }) %>
-    </ul>
-<% }) %>
-</div>
+<%- partial('_partial/catalogue', {type: "归档", chapters: archivePosts, orderEach: _.forEachRight}) %>

@@ -1,0 +1,26 @@
+<div class="catalogue">
+    <% _.forEach(chapters, function(posts, subtitle) { %>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><%- type %></li>
+            <li class="breadcrumb-item active">
+                <span>
+                    <%- subtitle %>
+                </span>
+            </li>
+        </ol>
+        <ul class="list-group catalogue-chapters">
+            <% orderEach(posts, function(item) { %>
+                <li class="list-group-item catalogue-chapter-item">
+                    <a href="<%- url_for(item.path) %>">
+                        <span>
+                            <%- item.title %>
+                        </span>
+                    </a>
+                    <span class="catalogue-chapter-item-date">
+                        <%- item.date %>
+                    </span>
+                </li>
+                <% }) %>
+        </ul>
+        <% }) %>
+</div>
