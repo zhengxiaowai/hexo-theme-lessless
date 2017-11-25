@@ -11,5 +11,5 @@ busuanzi:
 
 
 disqus:
-  enable: true
-  shortname: hexiangyu
+  enable: false
+  shortname: <your_shortname>
