@@ -1,5 +1,6 @@
 # hexo-theme-lessless
 
+[English](./README.md)
 Hexo 主题，没有什么功能，就是简单的博客主题。
 
 # Usage
@@ -48,7 +49,7 @@ highlight:
 
 ## menu
 
-主题导航相关配置
+主题导航相关配置
 
 ```yaml
 menu:

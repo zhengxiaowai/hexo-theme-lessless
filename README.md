@@ -1,5 +1,6 @@
 # hexo-theme-lessless
 
+[中文](./README-zh.md) 
 the simple theme for hexo. which has no futures, just very simple. 
 
 # Usage
