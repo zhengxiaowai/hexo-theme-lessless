@@ -1,15 +1,16 @@
 <div class="catalogue">
-    <% _.forEach(chapters, function(posts, subtitle) { %>
+    <% var sorted_year = Object.keys(chapters).sort().reverse();
+       for (var i = 0; i < sorted_year.length; i++){ %>
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><%- type %></li>
             <li class="breadcrumb-item active">
                 <span>
-                    <%- subtitle %>
+                    <%- sorted_year[i] %>
                 </span>
             </li>
         </ol>
         <ul class="list-group catalogue-chapters">
-            <% orderEach(posts, function(item) { %>
+            <% orderEach(chapters[sorted_year[i]].reverse(), function(item) { %>
                 <li class="list-group-item catalogue-chapter-item">
                     <a href="<%- url_for(item.path) %>">
                         <span>
@@ -22,5 +23,5 @@
                 </li>
                 <% }) %>
         </ul>
-        <% }) %>
+        <% } %>
 </div>
