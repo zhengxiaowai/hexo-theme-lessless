@@ -13,6 +13,17 @@ let archivePosts = _.mapValues(
     postsByYear, 
     posts => _.sortBy(posts, post => post.date).reverse());
 
+const orderChapters = (chapters, func) => {
+    _.each(_.keys(chapters).reverse(), subtitle => {
+        func(chapters[subtitle], subtitle);
+    })
+}
+
 %>
 
-<%- partial('_partial/catalogue', {type: "归档", chapters: archivePosts, orderEach: _.forEachRight}) %>
+<%- partial('_partial/catalogue', {
+    type: "归档", 
+    chapters: archivePosts, 
+    orderChapters: orderChapters, 
+    orderPosts: _.each 
+}) %>

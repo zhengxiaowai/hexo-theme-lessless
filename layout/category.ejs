@@ -20,4 +20,9 @@
     })
 %>
 
-<%- partial('_partial/catalogue', {type: "分类", chapters: categoryPosts, orderEach: _.each}) %>
+<%- partial('_partial/catalogue', {
+    type: "分类",
+    chapters: categoryPosts,
+    orderChapters: _.each, 
+    orderPosts: _.each
+}) %>
